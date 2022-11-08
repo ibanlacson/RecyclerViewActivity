@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 "1960", "https://www.amazon.com/Kill-Mockingbird-Harper-Lee/dp/0446310786",  R.drawable.img_book2
             ),
             BooksModel(
-                "Where the sidewalk ends", "Shel Silverstein",
+                "Where the Sidewalk Ends", "Shel Silverstein",
                 "Eight-year-old Scout Finch and her father, Atticus, find themselves enmeshed in the trial of a Black man accused of raping a White woman. In one of the most deeply sad books, Lee tells the events, revelations, and lessons through the eyes of a young child. Widely read and widely taught, To Kill a Mockingbird continues to spark discussions of race in classrooms and libraries across the country.",
                 "Where the Sidewalk Ends is truly one of the best poetry books of all time because of its staying power for children and adults alike. Whimsical and masterful, the stories of this American poet, author, singer, and folk artist have something for everyone.",
                 "1974", "https://www.amazon.com/Where-Sidewalk-Ends-Poems-Drawings/dp/0060256672",  R.drawable.img_book3
