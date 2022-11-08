@@ -30,7 +30,8 @@
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_height="match_parent"
             android:layout_weight="2"
             android:orientation="vertical"
             android:gravity="center">
@@ -39,9 +40,11 @@
                 android:id="@+id/txt_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="cursive"
                 android:text="Sample Title"
-                android:textSize="30sp"
-                android:textStyle="bold"/>
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textAlignment="center" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -54,7 +57,8 @@
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="25dp"
                     android:text="by: Someone"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    android:textSize="15sp"/>
 
                 <TextView
                     android:id="@+id/txt_year"
@@ -62,9 +66,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="25dp"
                     android:text="(year)"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    android:textSize="15sp"/>
+
             </LinearLayout>
 
+            <Button
+                android:id="@+id/btn_shop_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🛒 Shop Now"
+                android:backgroundTint="@color/brown"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -72,37 +84,48 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="vertical"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        <TextView
+            android:id="@+id/txt_synopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Synopsis:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txt_book_short_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Book Description here! Book Description here!"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Full Description:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/txt_book_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:text="Book Description here! Book Description here!"
-            android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="15sp" />
-        <TextView
-            android:id="@+id/txt_book_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:text="Book Description here! Book Description here!"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="16sp" />
 
-        <Button
-            android:id="@+id/btn_shop_now"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="🛒 Shop Now" />
+
     </LinearLayout>
 
 

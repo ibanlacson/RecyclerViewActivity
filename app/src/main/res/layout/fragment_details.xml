@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".dialogs.DetailsFragment">
+    tools:context=".dialogs.DetailsFragment"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,16 +15,16 @@
         android:orientation="vertical"
         android:gravity="center"
         android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@color/bg_color">
 
         <TextView
             android:id="@+id/txt_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sample Title"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/brown"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -60,6 +61,7 @@
             android:id="@+id/btn_dismiss"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:backgroundTint="@color/brown"
             android:text="Close"/>
 
     </LinearLayout>

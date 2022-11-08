@@ -2,11 +2,14 @@ package com.auf.cea.recyclerviewactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.auf.cea.recyclerviewactivity.adapter.RecyclerViewAdapter
 import com.auf.cea.recyclerviewactivity.databinding.ActivityMainBinding
 import com.auf.cea.recyclerviewactivity.models.BooksModel
+import java.util.Objects
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         supportActionBar!!.title = "Book Lists"
 
@@ -84,9 +88,32 @@ class MainActivity : AppCompatActivity() {
 
         )
 
-        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this)
-        val simpleRvAdapter = RecyclerViewAdapter(bookList,this)
+        showAnimation()
+
+        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this@MainActivity)
+        val simpleRvAdapter = RecyclerViewAdapter(bookList,this@MainActivity)
         binding.rvSimpleName.layoutManager = layoutManager
         binding.rvSimpleName.adapter = simpleRvAdapter
+    }
+
+    override fun onResume() {
+        super.onResume()
+        showAnimation()
+    }
+
+    private fun showAnimation(){
+        binding.animationBookLoading.isVisible = true
+        binding.rvSimpleName.isVisible = false
+        binding.animationBookLoading.playAnimation()
+
+        object : CountDownTimer(3000,1000){
+            override fun onTick(p0: Long) {
+            }
+            override fun onFinish() {
+                binding.animationBookLoading.isVisible = false
+                binding.animationBookLoading.cancelAnimation()
+                binding.rvSimpleName.isVisible = true
+            }
+        }.start()
     }
 }

@@ -31,7 +31,8 @@ class DetailsScreenActivity : AppCompatActivity(), View.OnClickListener {
                 imgHolder.setImageResource(bookObject.imgLink)
                 txtTitle.text = bookObject.name
                 txtYear.text = String.format("(%s)", bookObject.datePublished)
-                txtAuthor.text = bookObject.author
+                txtAuthor.text = String.format("by: %s", bookObject.author)
+                txtBookShortDescription.text = bookObject.shortDescription
                 txtBookDescription.text = bookObject.description
                 btnShopNow.setOnClickListener(this@DetailsScreenActivity)
             }

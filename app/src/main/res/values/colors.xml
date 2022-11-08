@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bg_color">#fffee6</color>
     <color name="brown">#624732</color>
+    <color name="text">#615151</color>
     <color name="orange_brown">#D07B58</color>
+
 </resources>
