@@ -43,9 +43,8 @@ class DetailsFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.txtAuthor.text = String.format("by: %s",bookData?.author)
+        binding.txtAuthorAndYear.text = String.format("by: %s (%s)", bookData?.author, bookData?.datePublished)
         binding.txtTitle.text = bookData?.name
-        binding.txtYear.text = String.format("(%s)", bookData?.datePublished)
         binding.txtBookDescription.text = bookData?.shortDescription
 
         binding.btnDismiss.setOnClickListener{

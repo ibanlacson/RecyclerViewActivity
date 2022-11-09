@@ -35,8 +35,7 @@ class RecyclerViewAdapter(private var bookList: ArrayList<BooksModel>, private v
             with(bookList[position]){
 
                 binding.txtTitle.text = this.name
-                binding.txtAuthor.text = String.format("By: %s", author)
-                binding.txtYear.text = String.format("(%s)",this.datePublished)
+                binding.txtAuthorAndYear.text = String.format("by: %s (%s)", this.author, this.datePublished)
                 binding.txtBookDescription.text = this.shortDescription
                 binding.imgHolder.setImageResource(this.imgLink)
 
